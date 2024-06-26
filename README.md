@@ -60,20 +60,38 @@ ___
                 "role": 1,
                 "english": "translation",
                 "ethimology": "original/origin...",
-                "description": "This is the name's description..."
+                "description": "This is the name's description...",
+                "synonyms": ""
             },
             {
                 "name": "Name 2",
                 "role": 2,
                 "english": "translation",
                 "ethimology": "original/origin...",
-                "description": "This is the name's description..."
+                "description": "This is the name's description...",
+                "synonyms": ""
             }
         //    .
         //    .
         //    .
         ]
         ```
+<br>
+
+- Gets all the silamena words given an english one (only names)
+    >GET - `/api/word/` `{english-name}`
+    - returns
+        ```json
+        "wordsList": [
+            "Option 1",
+            "Option 2",
+            "Option 3",
+        //    .
+        //    .
+        //    .
+        ]
+        ```
+
 <br>
 
 ___
@@ -87,7 +105,8 @@ ___
     "role": categorization (number),
     "english": english-translations (string),
     "ethimology": ethimology (string),
-    "description": description/explaination (string)
+    "description": description/explaination (string),
+    "synonyms": possible synonyms of the word (string)
     ```
 
 <br>
@@ -104,6 +123,7 @@ ___
     "english": new-translation,
     "ethimology": new-ethimology,
     "description": new-description
+    "synonyms": new-synonyms
     ```
 
 <br>
