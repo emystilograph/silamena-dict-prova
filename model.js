@@ -16,6 +16,7 @@ function Init() {
                 english: DataTypes.STRING,
                 ethimology: DataTypes.STRING,
                 description: DataTypes.STRING,
+                synonyms: DataTypes.STRING,
             },
             {
                 sequelize,
@@ -59,6 +60,7 @@ async function dbaddWord(wordmetemp) {
             english: wordmetemp.english,
             ethimology: wordmetemp.ethimology,
             description: wordmetemp.description,
+            synonyms: wordmetemp.synonyms,
         });
         wordModel.save();
         console.log(`Word added`);
